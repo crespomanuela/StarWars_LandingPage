@@ -1,0 +1,141 @@
+// Variables
+$color-black: #050505;
+$color-gold: #FFE81F; // Classic Star Wars Yellow
+$color-white: #FFFFFF;
+$color-gray: #1f1f1f;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; // Sugestão de fonte moderna
+}
+
+body {
+    background-color: $color-black;
+    color: $color-white;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Block: Header
+.header {
+    padding: 20px 0;
+    background-color: rgba($color-black, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid $color-gray;
+
+    // Element: Container
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    // Element: Logo
+    &__logo {
+        color: $color-gold;
+        font-size: 24px;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    // Element: Nav List
+    &__nav {
+        &__list {
+            display: flex;
+            gap: 30px;
+        }
+
+        &__item {
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $color-gold;
+            }
+        }
+    }
+}
+
+// Block: Hero
+.hero {
+    height: 100vh; // Aumentei para 100vh para ocupar a tela toda e dar mais espaço para a imagem
+    display: flex;
+    align-items: flex-end; // Joga o conteúdo para o final (baixo)
+    justify-content: center; // Mantém centralizado horizontalmente
+    text-align: center;
+    padding-bottom: 80px; // Cria um recuo para o texto não encostar na borda de baixo
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('../assets/images/stars-bg.webp'); 
+    background-size: cover;
+    background-position: center;
+
+    &__content {
+        max-width: 800px;
+        // Opcional: Adicionar um pequeno fade no fundo do texto para melhorar a leitura
+        background: rgba(0, 0, 0, 0.4);
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    &__title {
+        font-family: 'Poller One', cursive;
+        font-size: 56px; // Um pouco maior para dar destaque embaixo
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        margin-bottom: 32px;
+        color: #ccc;
+    }
+
+    // Element: Button
+    &__button {
+        padding: 12px 32px;
+        background-color: transparent;
+        color: $color-gold;
+        border: 2px solid $color-gold;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: $color-gold;
+            color: $color-black;
+            box-shadow: 0 0 20px rgba($color-gold, 0.6);
+            transform: scale(1.05); // Pequeno efeito de aumento no hover
+        }
+    }
+}
+
+.footer {
+    padding: 40px 0;
+    background-color: $color-black;
+    border-top: 1px solid $color-gray;
+    display: flex;
+    justify-content: center; // Centraliza horizontalmente
+    align-items: center;
+
+    &__text {
+        font-size: 14px;
+        color: #888;
+        letter-spacing: 1px;
+    }
+}
