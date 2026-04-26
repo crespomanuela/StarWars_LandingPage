@@ -1,0 +1,31 @@
+@mixin falcon-animation {
+    @keyframes falconFly {
+        0% {
+            transform: translate(-100%, 20%) rotate(10deg) scale(0.7);
+            opacity: 0;
+        }
+        20% {
+            opacity: 1; // Aparece rápido
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            transform: translate(120%, -20%) rotate(-5deg) scale(1.1);
+            opacity: 0;
+        }
+    }
+}
+
+@mixin text-reveal {
+    @keyframes textFadeIn {
+        from {
+            opacity: 0;
+            filter: blur(10px);
+        }
+        to {
+            opacity: 1;
+            filter: blur(0);
+        }
+    }
+}

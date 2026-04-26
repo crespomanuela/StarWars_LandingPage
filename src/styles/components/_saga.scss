@@ -1,0 +1,73 @@
+@use '../base/variables' as vars;
+@use '../base/animations' as anim;
+
+.saga {
+    padding: 100px 0;
+    background-color: #000000;
+    overflow: hidden; 
+    position: relative;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5%;
+        text-align: center;
+    }
+
+    &__header {
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        font-family: 'Montserrat', sans-serif; 
+        color: rgba(vars.$color-white, 0.5);
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-family: 'Montserrat', sans-serif;
+        color: rgba(vars.$color-white, 0.4);
+        font-size: 16px;
+    }
+
+    &__content {
+        position: relative;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__ship {
+        @include anim.falcon-animation;
+
+        position: absolute;
+        width: 280px; 
+        z-index: 50;
+        pointer-events: none;
+
+        // will-change otimiza a animação no Mac
+        will-change: transform, opacity;
+        
+        animation: falconFly 8s linear infinite; 
+    }
+
+    &__coming-soon {
+        @include anim.text-reveal; 
+
+        font-family: 'Montserrat', sans-serif;
+        color: rgba(vars.$color-white, 0.5);
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 48px; 
+        letter-spacing: 2px;
+        z-index: 2;
+        text-align: center;
+        
+        opacity: 0;
+        // O delay de 3s faz ele aparecer após a nave começar a passar
+        animation: textFadeIn 2s ease-out 3s forwards;
+    }
+}

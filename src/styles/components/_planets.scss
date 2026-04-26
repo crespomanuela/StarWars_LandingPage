@@ -1,0 +1,38 @@
+@use '../base/variables' as vars;
+
+.planets {
+    padding: 100px 0;
+    background-color: vars.$color-black;
+    overflow: hidden; 
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 5%;
+    }
+
+    &__scroll-wrapper {
+        width: 100%;
+        overflow-x: auto; 
+        padding: 40px 0;
+        -webkit-overflow-scrolling: touch;
+
+        // Customização da barra para garantir que ela apareça
+        &::-webkit-scrollbar { height: 6px; }
+        &::-webkit-scrollbar-thumb { background: vars.$color-gold; border-radius: 10px; }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: nowrap;  
+        flex-direction: row;  
+        gap: 30px;
+        width: max-content;  
+        padding-left: 5%;
+    }
+
+    &__item {
+        flex: 0 0 450px; 
+        list-style: none;
+    }
+}

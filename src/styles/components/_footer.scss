@@ -1,0 +1,16 @@
+@use '../base/variables' as vars;
+
+.footer {
+    padding: 40px 0;
+    background-color: vars.$color-black; 
+    border-top: 1px solid vars.$color-gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        font-size: 14px;
+        color: #888;
+        letter-spacing: 1px;
+    }
+}

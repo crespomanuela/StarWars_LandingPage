@@ -1,0 +1,268 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #050505;
+  color: #FFFFFF;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.saga {
+  padding: 100px 0;
+  background-color: #000000;
+  overflow: hidden;
+  position: relative;
+}
+.saga__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  text-align: center;
+}
+.saga__header {
+  margin-bottom: 50px;
+}
+.saga__title {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.saga__description {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+}
+.saga__content {
+  position: relative;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes falconFly {
+  0% {
+    transform: translate(-100%, 20%) rotate(10deg) scale(0.7);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(120%, -20%) rotate(-5deg) scale(1.1);
+    opacity: 0;
+  }
+}
+.saga__ship {
+  position: absolute;
+  width: 280px;
+  z-index: 50;
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: falconFly 8s linear infinite;
+}
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.saga__coming-soon {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 48px;
+  letter-spacing: 2px;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  animation: textFadeIn 2s ease-out 3s forwards;
+}
+
+.header {
+  padding: 20px 0;
+  background-color: rgba(5, 5, 5, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #1f1f1f;
+}
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+.header__logo {
+  color: #FFE81F;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.header__nav__list {
+  display: flex;
+  gap: 30px;
+}
+.header__nav__item {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.header__nav__item:hover {
+  color: #FFE81F;
+}
+
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../assets/images/stars-bg.webp");
+  background-size: cover;
+  background-position: center;
+}
+.hero__content {
+  max-width: 800px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0;
+}
+.hero__title {
+  font-family: "Poller One", cursive;
+  font-size: clamp(32px, 8vw, 56px);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+.hero__subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin-bottom: 48px;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 1px;
+  display: block;
+}
+.hero__button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 16px 40px;
+  background-color: #050505;
+  color: rgba(255, 255, 255, 0.6);
+  border: 2px solid #FFE81F;
+  border-radius: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  font-family: "Montserrat", sans-serif;
+}
+.hero__button:hover {
+  background-color: #FFE81F;
+  color: #050505;
+  box-shadow: 0 0 15px rgba(255, 232, 31, 0.5);
+  transform: scale(1.05);
+}
+
+.planets {
+  padding: 100px 0;
+  background-color: #050505;
+  overflow: hidden;
+}
+.planets__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.planets__scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 40px 0;
+  -webkit-overflow-scrolling: touch;
+}
+.planets__scroll-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+.planets__scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #FFE81F;
+  border-radius: 10px;
+}
+.planets__list {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 30px;
+  width: max-content;
+  padding-left: 5%;
+}
+.planets__item {
+  flex: 0 0 450px;
+  list-style: none;
+}
+
+.planet-card {
+  width: 100%;
+  text-align: center;
+}
+.planet-card__image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.planet-card__name {
+  font-family: "Montserrat", sans-serif;
+  color: #FFE81F;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.planet-card__info {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+.footer {
+  padding: 40px 0;
+  background-color: #050505;
+  border-top: 1px solid #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__text {
+  font-size: 14px;
+  color: #888;
+  letter-spacing: 1px;
+}

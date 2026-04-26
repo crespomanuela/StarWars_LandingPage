@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars | Explore the Galaxy</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poller+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <header class="header">
@@ -14,8 +14,6 @@
             <nav class="header__nav">
                 <ul class="header__nav__list">
                     <li class="header__nav__item"><a href="#saga">The Saga</a></li>
-                    <li class="header__nav__item"><a href="#characters">Characters</a></li>
-                    <li class="header__nav__item"><a href="#movies">Movies</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,13 +23,61 @@
         <section class="hero">
             <div class="hero__content">
                 <h2 class="hero__title">May the Force be with you</h2>
-                <p class="hero__subtitle">Experience the ultimate journey across the stars.</p>
-                <button class="hero__button">Explore the Galaxy</button>
+                <p class="hero__subtitle">Experience the ultimate journey across the stars</p>
+                <a href="#planets" class="hero__button">Explore the Galaxy</a>
+            </div>
+        </section>
+
+        <section id="planets" class="planets">
+            <div class="planets__container">
+                <div class="planets__scroll-wrapper">
+            <ul class="planets__list">
+                <li class="planets__item">
+                    <article class="planet-card">
+                        <img src="./assets/images/tatooine.webp" alt="Tatooine" class="planet-card__image">
+                        <div class="planet-card__content">
+                            <h3 class="planet-card__name">Tatooine</h3>
+                            <p class="planet-card__info">Skywalkers's Home</p>
+                        </div>
+                    </article>
+                </li>
+                 <li class="planets__item">
+                    <article class="planet-card">
+                        <img src="./assets/images/naboo.png" alt="Tatooine" class="planet-card__image">
+                        <div class="planet-card__content">
+                            <h3 class="planet-card__name">Naboo</h3>
+                            <p class="planet-card__info">A world of vast gardens and deep oceans</p>
+                        </div>
+                    </article>
+                </li>
+                 <li class="planets__item">
+                    <article class="planet-card">
+                        <img src="./assets/images/republic.webp" alt="Tatooine" class="planet-card__image">
+                        <div class="planet-card__content">
+                            <h3 class="planet-card__name">Coruscant</h3>
+                            <p class="planet-card__info">The urban heart of the entire galaxy</p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+            </div>
             </div>
         </section>
 
         <section id="saga" class="saga">
-            </section>
+            <div class="saga__container">
+                <header class="saga__header">
+                    <h2 class="saga__title">The Legendary Sagas</h2>
+                        <p class="saga__description">
+                            A journey through 9 episodes and the expanded universe.
+                        </p>
+                </header>
+                <div class="saga__content">
+                    <img src="./assets/images/Millennium-Falcon.webp" alt="Millennium-Falcon" class="saga__chip">
+                    <p class="saga__coming-soon">Coming Soon</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
