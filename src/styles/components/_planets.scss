@@ -29,10 +29,19 @@
         gap: 30px;
         width: max-content;  
         padding-left: 5%;
+
+        @media (max-width: 768px) {
+            gap: 20px;
+            padding-left: 20px; 
+        }
     }
 
     &__item {
         flex: 0 0 450px; 
         list-style: none;
+
+        @media (max-width: 768px) {
+            flex: 0 0 300px; 
+        }
     }
 }

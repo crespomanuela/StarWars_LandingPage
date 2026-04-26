@@ -81,6 +81,11 @@ a {
   will-change: transform, opacity;
   animation: falconFly 8s linear infinite;
 }
+@media (max-width: 768px) {
+  .saga__ship {
+    width: 200px;
+  }
+}
 @keyframes textFadeIn {
   from {
     opacity: 0;
@@ -102,6 +107,11 @@ a {
   text-align: center;
   opacity: 0;
   animation: textFadeIn 2s ease-out 3s forwards;
+}
+@media (max-width: 768px) {
+  .saga__coming-soon {
+    font-size: 40px;
+  }
 }
 
 .header {
@@ -165,6 +175,12 @@ a {
   margin-bottom: 24px;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
 .hero__subtitle {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -172,6 +188,12 @@ a {
   color: rgba(255, 255, 255, 0.7);
   letter-spacing: 1px;
   display: block;
+}
+@media (max-width: 768px) {
+  .hero__subtitle__subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
 }
 .hero__button {
   display: inline-block;
@@ -192,6 +214,12 @@ a {
   color: #050505;
   box-shadow: 0 0 15px rgba(255, 232, 31, 0.5);
   transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .hero__button {
+    padding: 12px 30px;
+    width: 80%;
+  }
 }
 
 .planets {
@@ -225,9 +253,20 @@ a {
   width: max-content;
   padding-left: 5%;
 }
+@media (max-width: 768px) {
+  .planets__list {
+    gap: 20px;
+    padding-left: 20px;
+  }
+}
 .planets__item {
   flex: 0 0 450px;
   list-style: none;
+}
+@media (max-width: 768px) {
+  .planets__item {
+    flex: 0 0 300px;
+  }
 }
 
 .planet-card {

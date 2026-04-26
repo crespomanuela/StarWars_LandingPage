@@ -28,6 +28,11 @@
         font-size: clamp(32px, 8vw, 56px);
         margin-bottom: 24px;
         text-transform: uppercase;
+
+        @media (max-width: 768px) {
+            font-size: 32px; 
+            margin-bottom: 16px;
+        }
     }
 
     &__subtitle {
@@ -37,6 +42,13 @@
         color: rgba(vars.$color-white, 0.7); // Cinza suave
         letter-spacing: 1px;
         display: block;
+
+        &__subtitle {
+        @media (max-width: 768px) {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+      }
     }
 
     &__button {
@@ -58,6 +70,11 @@
             color: vars.$color-black; // Inverte as cores no hover
             box-shadow: 0 0 15px rgba(vars.$color-gold, 0.5);
             transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            padding: 12px 30px;
+            width: 80%; 
         }
     }
 }
