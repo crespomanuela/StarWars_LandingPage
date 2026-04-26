@@ -52,10 +52,6 @@
         will-change: transform, opacity;
         
         animation: falconFly 8s linear infinite; 
-
-        @media (max-width: 768px) {
-            width: 200px; 
-        }
     }
 
     &__coming-soon {
@@ -73,9 +69,5 @@
         opacity: 0;
         // O delay de 3s faz ele aparecer após a nave começar a passar
         animation: textFadeIn 2s ease-out 3s forwards;
-
-        @media (max-width: 768px) {
-            font-size: 40px; 
-        }
     }
 }

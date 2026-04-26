@@ -81,11 +81,6 @@ a {
   will-change: transform, opacity;
   animation: falconFly 8s linear infinite;
 }
-@media (max-width: 768px) {
-  .saga__ship {
-    width: 200px;
-  }
-}
 @keyframes textFadeIn {
   from {
     opacity: 0;
@@ -107,11 +102,6 @@ a {
   text-align: center;
   opacity: 0;
   animation: textFadeIn 2s ease-out 3s forwards;
-}
-@media (max-width: 768px) {
-  .saga__coming-soon {
-    font-size: 40px;
-  }
 }
 
 .header {
