@@ -1,6 +1,19 @@
 @use '../base/variables' as vars;
 @use '../base/animations' as anim;
 
+@keyframes moveFalconPath {
+    0% { 
+        offset-distance: 0%; 
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { 
+        offset-distance: 100%; 
+        opacity: 0;
+    }
+}
+
 .saga {
     padding: 100px 0;
     background-color: #000000;
@@ -34,24 +47,31 @@
 
     &__content {
         position: relative;
-        height: 500px;
+        height: 600px; 
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     &__ship {
-        @include anim.falcon-animation;
-
         position: absolute;
-        width: 280px; 
+        width: 1000px; 
         z-index: 50;
         pointer-events: none;
+        will-change: transform, opacity, offset-distance;
+        border: none;            
+        outline: none;            
+        background: transparent;  
+        box-shadow: none;
+        mix-blend-mode: screen;
 
-        // will-change otimiza a animação no Mac
-        will-change: transform, opacity;
+        offset-path: path('M -200 400 L 1400 100');
         
-        animation: falconFly 8s linear infinite; 
+        // 3. FAZ A NAVE SE ORIENTAR SOZINHA NA CURVA
+        offset-rotate: auto 0deg; 
+        
+        // 4. CHAME A ANIMAÇÃO QUE CRIAMOS NO TOPO
+        animation: moveFalconPath 8s linear infinite; 
     }
 
     &__coming-soon {
@@ -67,7 +87,6 @@
         text-align: center;
         
         opacity: 0;
-        // O delay de 3s faz ele aparecer após a nave começar a passar
         animation: textFadeIn 2s ease-out 3s forwards;
     }
 }
